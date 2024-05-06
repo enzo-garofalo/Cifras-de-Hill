@@ -13,7 +13,8 @@ def criptografar():
 
   matriz_palavra_em_num = palavra_em_matriz(palavra)
 
-  palavra = palavra[:-1]
+  if palavra_impar:
+    palavra = palavra[:-1]
   print("-"*50)
   print(f"Matriz da palavra  {palavra} em número:")
   print(matriz_palavra_em_num)

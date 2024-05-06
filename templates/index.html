@@ -1,0 +1,27 @@
+{% extends "template.html" %}
+{% block content %}
+<div id='container'>
+  <div id='form'>
+    <form method="POST" action="{{url_for('calcular')}}">
+      <fielset>
+        <div id='welcome'>
+          <p>Cifras De Hill</p>
+        </div>         
+        <div class="choice">
+          <select id='choice' name='choice' required>
+            <option value='' disabled selected hidden>Escolha entre Criptografar ou Decifrar</option>
+            <option value='criptografar' name='choice'>Criptografar</option>
+            <option value='decifrar' name='choice'>Decifrar</option>
+          </select>
+        </div>
+                              <br>          
+        <div class="palavra">
+          <input type="text" name="palavra" required/>
+          <label>Palavra:</label>
+          <button type="submit" class="submit">Enviar</button>
+        </div>
+      </fieldset>
+    </form>        
+  </div>
+</div>
+{% endblock content %}
