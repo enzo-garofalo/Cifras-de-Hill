@@ -1,0 +1,1 @@
+web: gunicorn -b :$PORT publicar.py:app
