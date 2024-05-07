@@ -10,6 +10,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Jersey+25+Charted&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
   </head>
   <body>
-    {% block content %}{% endblock content %}
+    <div id='container'>
+      
+      <div id='form'>
+        
+        <div id='welcome'>
+          <p>{{page_title}}</p>
+        </div>
+        {% block content %}{% endblock content %}
+      
+      </div>
+    
+    </div>
+
   </body>
+
 </html>

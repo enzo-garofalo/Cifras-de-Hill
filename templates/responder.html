@@ -1,4 +1,9 @@
 {% extends "template.html" %}
 {% block content %}
-    <h1>{{resposta}}<h1>
+    <div id='resposta'>
+        <h1>{{ palavra }} = {{ resposta }}</h1>
+    </div>
+    <a href='{{url_for('index')}}'>
+        <button id="Voltar" class='Voltar'>Voltar</button>
+    </a>
 {% endblock content %}
