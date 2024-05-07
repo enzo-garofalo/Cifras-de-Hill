@@ -85,7 +85,7 @@ def responder():
   resposta = request.args.get('resposta')
   palavra = request.args.get('palavra')
   palavra = palavra.upper() 
-  return render_template('responder.html', title='Resposta', resposta=resposta, palavra=palavra, page_title='Resposta!')
+  return render_template('responder.html', title='Resposta', resposta=resposta, palavra=palavra, page_title='Resposta')
 
 
 if __name__ == '__main__':
