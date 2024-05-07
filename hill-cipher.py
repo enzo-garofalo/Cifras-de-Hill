@@ -65,23 +65,28 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-  return render_template('index.html', title='Hill Cipher')
+  return render_template('index.html', title='Hill Cipher', page_title='Cifras de Hill')
 
-@app.route('/calcular', methods=['POST',])
+@app.route('/calcular', methods=['POST'])
 def calcular():
   palavra = request.form['palavra']
   choice = request.form['choice']
 
   if choice == 'decifrar':
-    resposta = decifrar(palavra)
+      resposta = decifrar(palavra)
   else:
-    resposta = criptografar(palavra)
+      resposta = criptografar(palavra)
 
-  return redirect(url_for('responder', resposta=resposta))
+  return redirect(url_for('responder', resposta=resposta, palavra=palavra))
 
-@app.route('/responder/<resposta>')
-def responder(resposta):
-    return render_template('responder.html', resposta=resposta)
+@app.route('/responder')
+def responder():
+  # Estudar query string
+  resposta = request.args.get('resposta')
+  palavra = request.args.get('palavra')
+  palavra = palavra.upper() 
+  return render_template('responder.html', title='Resposta', resposta=resposta, palavra=palavra, page_title='Resposta!')
+
 
 if __name__ == '__main__':
   app.run(debug=True)
