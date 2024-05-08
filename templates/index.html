@@ -13,8 +13,11 @@
         <div class="palavra">
           <input type="text" name="palavra" required/>
           <label>Palavra:</label>
+          <br>
           <button type="submit" id="submit">Enviar</button>
         </div>
       </fieldset>
     </form>
+    <br><br><br>
+    <a id="configurar" href="{{ url_for('configurar')}}">Matriz Codificadora</a>
 {% endblock content %}

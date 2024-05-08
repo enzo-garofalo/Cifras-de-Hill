@@ -1,7 +1,6 @@
 * {
-  font-family: "Quicksand", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 650;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
   font-style: normal;
   margin: 0;
   padding: 0;
@@ -156,6 +155,26 @@ body {
   color: #fff;
   box-shadow: inset 0 100px 0 0 #ec586b;
 }
+#configurar {
+  color: #8149db;
+  border: 2px solid #8149db;
+  width: 50%; /* Largura reduzida para 50% */
+  border-radius: 5px;
+  padding: 14px; /* Adicionando preenchimento */
+  font-size: 20px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #acaaab;
+  transition: ease-out 0.4s;
+  display: block; /* Transformar em bloco para centralizar */
+  margin: 0 auto; /* Margem automática para centralizar */
+  margin-top: 15PX;
+  margin-bottom: -20px;
+}
+#configurar:hover {
+  color: #fff;
+  box-shadow: inset 0 100px 0 0 #8149db;
+}
 #resposta
 {
   color: #35b3fc;
@@ -165,5 +184,6 @@ body {
 }
 a
 {
+  text-align: center;
   text-decoration: none;
 }

@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 import numpy as np
 
-alfabeto = {' ': 0,'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5, 'F': 6, 'G': 7, 'H': 8, 'I': 9, 'J': 10, 'K': 11, 'L': 12, 'M': 13, 'N': 14, 'O': 15, 'P': 16, 'Q': 17, 'R': 18, 'S': 19, 'T': 20, 'U': 21, 'V': 22, 'W': 23, 'X': 24, 'Y': 25, 'Z': 26}
+alfabeto = {'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5, 'F': 6, 'G': 7, 'H': 8, 'I': 9, 'J': 10, 'K': 11, 'L': 12, 'M': 13, 'N': 14, 'O': 15, 'P': 16, 'Q': 17, 'R': 18, 'S': 19, 'T': 20, 'U': 21, 'V': 22, 'W': 23, 'X': 24, 'Y': 25, 'Z': 26}
 
 def criptografar(palavra):
   palavra = palavra.upper()
@@ -87,6 +87,9 @@ def responder():
   palavra = palavra.upper() 
   return render_template('responder.html', title='Resposta', resposta=resposta, palavra=palavra, page_title='Resposta')
 
+@app.route('/configurar')
+def configurar():
+   return render_template('configurar.html', title='Configurar', page_title='Configurar')
 
 if __name__ == '__main__':
   app.run(debug=True)
